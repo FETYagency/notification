@@ -1,0 +1,159 @@
+@import url(reset.css);
+@import url(vars.css);
+
+@font-face {
+    font-family: "myFont";
+    src: url(../font/PlusJakartaSans-VariableFont_wght.ttf);
+}
+p{
+    font-weight: var(--WGHT-medium);
+    color: var( --Dark-grayish-blue);
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+img{
+    max-inline-size: 100%;
+    object-fit: contain;
+}
+a{
+    text-decoration: none;
+    font-weight: var(--WGHT-bold);
+    color: var(--Very-dark-blue);
+    line-height: 1.2rem;
+}
+a:hover{
+    color: var(--Blue);
+}
+
+body{
+    background: var(--Light-grayish-blue-2);
+    font-family: "myFont";
+
+    display: grid;
+    place-content: center;
+    place-items: center;
+
+    min-block-size: 100vh;
+
+    padding-block: 5rem;
+}
+
+main{
+    inline-size: clamp(min(350px, 100%), 80vw, 750px);
+    background-color: var(--White);
+
+    padding-inline: 2rem;
+
+    border-radius: 15px;
+
+    container-type: inline-size;
+    container-name: header;
+}
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+
+    row-gap: 1rem;
+
+    padding-block: 2rem;
+
+}
+.noti{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.noti__header{
+    font-size: 1.5rem;
+    font-weight: var(--WGHT-bold);
+}
+.noti__icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    text-align: center;
+    background-color: var(--Blue);
+
+    inline-size: 32px;
+    block-size: 25px;
+    border-radius: 6px;
+}
+.noti__icon>p{
+    color: var(--White);
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    font-weight: var(--WGHT-medium);
+    font-family: inherit;
+    color: var( --Dark-grayish-blue);
+
+    cursor: pointer;
+}
+
+button:hover{
+    color: var(--Blue);
+}
+
+
+@container header (width<400px){
+    header{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.notification{
+    cursor: pointer;
+    padding-inline: 1.2rem;
+    padding-block: 1rem;
+    border-radius: 8px;
+
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    gap: 1rem;
+}
+.notification>article{
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+}
+.duration{
+    color: var(--Grayish-blue);
+}
+.msg{
+    margin-block-start: .3rem;
+    border: 1px solid var(--Light-grayish-blue-2);
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    border-radius: 5px;
+}
+.comment{
+    grid-template-columns: 45px 1fr 45px;
+}
+
+
+span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--Red);
+    margin-inline-start: 5px;
+}
+
